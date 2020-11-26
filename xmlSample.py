@@ -1,5 +1,35 @@
 import xml.etree.ElementTree as ET
 
+def writeXml(xmlRoot, path):
+    import xml.dom.minidom as md
+    encode = "utf-8"
+    xmlFile = open(path, "w")
+    document = md.parseString(ET.tostring(xmlRoot, encode))
+    document.writexml(
+        xmlFile,
+        encoding = encode,
+        newl = "\n",
+        indent = "",
+        addindent = "\t"
+    )
+
+inFile = 'testScripts\country_data.xml'
+tree = ET.parse(inFile) 
+root = tree.getroot()
+
+
+
+title = ET.Element('object')
+node = ET.SubElement(title, 'node', {'name':'pCube'})
+attribute = ET.SubElement(node, 'attribute', {'string' : 'rotateX', 'value' : '0.0'})
+attribute = ET.SubElement(node, 'attribute', {'string' : 'rotateY', 'value' : '0.0'})
+attribute = ET.SubElement(node, 'attribute', {'string' : 'rotateZ', 'value' : '0.0'})
+
+ET.dump(title)
+writeXml(title, 'D:/Maya/scripts/testScripts/xmlRun.xml')
+
+
+'''
 def make_xml(dc):
     roots = ET.Element('root', {'ttl':'test_root'})
     p = ET.SubElement(roots, 'p1') 
@@ -38,4 +68,6 @@ dc = {'fld1': 'test1', 'fld2': 'test2', 'fld3': 'test3'}
 fl = make_xml(dc)                        
 print( fl )
 
-read_xml( fl )   
+read_xml( fl )
+
+'''

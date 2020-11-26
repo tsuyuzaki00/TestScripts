@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<object>
+	<node name="global_C0_ctl">
+		<attribute string="translateX" value="-1.259"/>
+		<attribute string="translateY" value="0.0"/>
+		<attribute string="translateZ" value="8.094"/>
+		<attribute string="rotateX" value="30.425"/>
+		<attribute string="rotateY" value="0.0"/>
+		<attribute string="rotateZ" value="20.687"/>
+		<attribute string="scaleX" value="1.0"/>
+		<attribute string="scaleY" value="1.0"/>
+		<attribute string="scaleZ" value="1.0"/>
+		<attribute string="chain_C0_chain_C0" value="0.0"/>
+		<attribute string="chain_C0_IK_vis" value="1.0"/>
+		<attribute string="chain_C0_FK_vis" value="1.0"/>
+	</node>
+</object>
