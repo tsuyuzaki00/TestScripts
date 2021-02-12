@@ -1,23 +1,14 @@
-{
-    "object": {
-        "node": [
-            {
-                "name": "pCube", 
-                "attrbute": [
-                    {
-                        "string": "rotateX", 
-                        "value": "0.0"
-                    }, 
-                    {
-                        "string": "rotateY", 
-                        "value": "0.0"
-                    }, 
-                    {
-                        "string": "rotateZ", 
-                        "value": "0.0"
-                    }
-                ]
-            }
-        ]
+[
+    {
+        "name": "joint1",
+        "pos": "C",
+        "node": "geo",
+        "num": "1"
+    },
+    {
+        "name": "joint3",
+        "pos": "L",
+        "node": "jnt",
+        "num": "1"
     }
-}
+]

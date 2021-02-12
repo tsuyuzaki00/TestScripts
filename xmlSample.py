@@ -30,9 +30,9 @@ def testReadXml():
     root = tree.getroot()
 
     for country in root:
-        print country.attrib
+        print (country.attrib)
         for neighbor in country:
-            print neighbor.attrib
+            print (neighbor.attrib)
 
 testWriteXml()
 #testReadXml()
