@@ -5,13 +5,13 @@ import pprint
 #filePass = 'C:/Users/tsuyuzaki.tatsuya/Desktop/test/output.json'
 filePass = 'testScripts/jsonRun.json'
 
-def testWriteJson():
+def test_write_json():
     s =  {'name' : 'joint1', 'pos' : 'C', 'node': 'geo', 'num': str(1)}
     #s = {"object": { "node" : [{ "name" : "pCube", "attrbute": [ {"string": "rotateX", "value": "0.0"},{"string": "rotateY", "value": "0.0"},{"string": "rotateZ", "value": "0.0"} ]}]}}
     with open(filePass, 'w') as f:
         json.dump(s, f, indent = 4, ensure_ascii =False)
 
-def testReadJson():
+def test_read_json():
     with open(filePass, 'r') as f:
         roots = json.load(f)
         for root in roots:
@@ -20,5 +20,5 @@ def testReadJson():
             #pprint.pprint(root, width=40)
             #name = root['body']['name']
 
-#testWriteJson()
-testReadJson()
+#test_write_json()
+test_read_json()
